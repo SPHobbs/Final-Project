@@ -78,9 +78,9 @@ public class Sides extends global {
 
         MACLabel.setText("- - - - - - - - - - - - - - - - - - - - -$2.00");
 
-        biscuitsLabel.setText("- - - - - - - - - - - - - - - - - - - - -$2.50");
+        biscuitsLabel.setText("- - - - - - - - - - - - - - - - - - - - -$2.00");
 
-        greenBeensLabel.setText("- - - - - - - - - - - - - - - - - - - - -$2.50");
+        greenBeensLabel.setText("- - - - - - - - - - - - - - - - - - - - -$2.00");
         //Auto generated code
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

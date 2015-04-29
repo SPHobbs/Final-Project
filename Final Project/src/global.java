@@ -17,4 +17,5 @@ public class global extends javax.swing.JFrame {
     public int brownie;
     public int cookie;
     public int cake;
+    
 }

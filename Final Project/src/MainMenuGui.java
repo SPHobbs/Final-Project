@@ -17,7 +17,9 @@ public class MainMenuGui extends global{
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton sidesButton;
     private javax.swing.JButton signOutButton;
-    public int price;
+    public MainMenuGui() {
+        initComponents();
+    }
     // End of variables declaration
 
     private void initComponents() {
@@ -36,54 +38,6 @@ public class MainMenuGui extends global{
 
         MainMenuTitle.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         MainMenuTitle.setText("Sean's Restaurant of Awesomeness");
-
-        entreeButton.setText("Entrees");
-        entreeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entreeButtonActionPerformed(evt);
-            }
-        });
-
-        sidesButton.setText("Sides");
-        sidesButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sidesButtonActionPerformed(evt);
-            }
-        });
-
-        drinksButton.setText("Drinks");
-        drinksButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                drinksButtonActionPerformed(evt);
-            }
-        });
-
-        dessertsButton.setText("Desserts");
-        dessertsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dessertsButtonActionPerformed(evt);
-            }
-        });
-
-        finishButton.setText("Finish and Pay");
-        finishButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	finishButtonActionPerformed(evt);
-            }
-        });
-        resetButton.setText("Reset order");
-        resetButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	resetButtonActionPerformed(evt);
-            }
-        });
-        
-        signOutButton.setText("Sign Out");
-        signOutButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                signOutButtonActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,7 +99,54 @@ public class MainMenuGui extends global{
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {dessertsButton, drinksButton, entreeButton, sidesButton});
 
         pack();
-    }
+    
+    entreeButton.setText("Entrees");
+    entreeButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            entreeButtonActionPerformed(evt);
+        }
+    });
+
+    sidesButton.setText("Sides");
+    sidesButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            sidesButtonActionPerformed(evt);
+        }
+    });
+
+    drinksButton.setText("Drinks");
+    drinksButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            drinksButtonActionPerformed(evt);
+        }
+    });
+
+    dessertsButton.setText("Desserts");
+    dessertsButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            dessertsButtonActionPerformed(evt);
+        }
+    });
+
+    finishButton.setText("Finish and Pay");
+    finishButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+        	finishButtonActionPerformed(evt);
+        }
+    });
+    resetButton.setText("Reset order");
+    resetButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+        	resetButtonActionPerformed(evt);
+        }
+    });
+    
+    signOutButton.setText("Sign Out");
+    signOutButton.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            signOutButtonActionPerformed(evt);
+        }
+    });}
 
     protected void resetButtonActionPerformed(ActionEvent evt) {
 		// This method resets the program for the next customer
@@ -249,6 +250,7 @@ public class MainMenuGui extends global{
 		} catch (FileNotFoundException e) {
 			System.out.println("Could not print reciept");
 		}
+		System.exit(0);
 	}
 
 	private void entreeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entreeButtonActionPerformed
@@ -260,7 +262,7 @@ public class MainMenuGui extends global{
     private void sidesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sidesButtonActionPerformed
         // This button brings the user to the sides menu
         new MainMenuGui().setVisible(false);
-        new Entree().setVisible(true);
+        new Sides().setVisible(true);
     }
 
     private void drinksButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drinksButtonActionPerformed
